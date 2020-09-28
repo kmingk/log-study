@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="error">
+
+    <Properties>
+
+        <Property name="fileName">front.log</Property>
+               <Property name="backupFilePatch">d:/usr/front/log/</Property>
+
+              </Properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+<!--            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />-->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n" />
+        </Console>
+    </appenders>
+
+    <loggers>
+
+        <Logger name="com.testlog" level="trace" additivity="true">
+            <AppenderRef ref="Console" />
+        </Logger>
+
+        <root level="debug">
+            <AppenderRef ref="Console" />
+        </root>
+    </loggers>
+
+</configuration>
