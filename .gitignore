@@ -1,0 +1,9 @@
+
+*/target/*
+*.iml
+*.versionsBackup
+.idea
+
+test/*
+
+target/
